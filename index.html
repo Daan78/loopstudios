@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+      <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+      
+      <title>Frontend Mentor | Loopstudios landing page</title>
+</head>
+      <body>
+            <!-- <div class="original-design--desktop"></div> -->
+            <!-- <div class="original-design--mobile"></div> -->
+            <header>
+                  <div class="hero--img">
+                  <!-- <div class="hero--img" style="background-image: none;"> -->
+                        <div class="wrapper wrapper--header">
+                              <div class="flex">
+                                    <div class="logo">
+                                          <img class="logo--header" src="images/logo.svg" alt="Looptstudios - Logo">
+                                    </div>
+                                    <img class="nav-icon nav-icon--open active" src="images/icon-hamburger.svg" alt="Open Navigation Menu Icon">
+                                    <img class="nav-icon nav-icon--close" src="images/icon-close.svg" alt="Close Navigation Menu Icon">
+                                    <nav class="nav nav__header--desktop">
+                                          <ul>
+                                                <li class="nav__header--item">
+                                                      <a class="btn btn--white" href="#">About</a>
+                                                </li>
+                                                <li class="nav__header--item">
+                                                      <a class="btn btn--white" href="#">Careers</a>
+                                                </li>
+                                                <li class="nav__header--item">
+                                                      <a class="btn btn--white" href="#">Events</a>
+                                                </li>
+                                                <li class="nav__header--item">
+                                                      <a class="btn btn--white" href="#">Products</a>
+                                                </li>
+                                                <li class="nav__header--item">
+                                                      <a class="btn btn--white" href="#">Support</a>
+                                                </li>
+                                          </ul>
+                                    </nav>
+                              </div>
+                              <div class="flex--center desktop">
+                                    <h1 class="hero--title active">Immersive experiences that deliver</h1>
+                              </div>
+                        </div>
+                        
+                        <div class="flex--center mobile">
+                              <h1 class="hero--title active">Immersive experiences that deliver</h1>
+                              <nav class="nav nav__header--mobile">
+                                    <ul>
+                                          <li class="nav__header--mobile item">
+                                                <a class="btn btn--white" href="#">About</a>
+                                          </li>
+                                          <li class="nav__header--mobile item">
+                                                <a class="btn btn--white" href="#">Careers</a>
+                                          </li>
+                                          <li class="nav__header--mobile item">
+                                                <a class="btn btn--white" href="#">Events</a>
+                                          </li>
+                                          <li class="nav__header--mobile item">
+                                                <a class="btn btn--white" href="#">Products</a>
+                                          </li>
+                                          <li class="nav__header--mobile item">
+                                                <a class="btn btn--white" href="#">Support</a>
+                                          </li>
+                                    </ul>
+                              </nav>
+                        </div>
+                  </div>
+            </header>
+
+            <main>
+                  <div class="wrapper">
+                        <section class="introduction">
+                              <picture>
+                                    <source srcset="images/desktop/image-interactive.jpg" media="(min-width: 750px)" />
+                                    <img class="introduction--image" src="images/mobile/image-interactive.jpg" alt="">
+                              </picture>
+                              <div class="introduction__overlap">
+                                    <h2 class="introduction__overlap--title">The leader in interactive VR</h2>
+                                    <p class="introduction__overlap--description">
+                                          Founded in 2011, Loopstudios has been producing world-class virtual reality 
+                                          projects for some of the best companies around the globe. Our award-winning 
+                                          creations have transformed businesses through digital experiences that bind 
+                                          to their brand.
+                                    </p>
+                              </div>
+                              
+                        </section>
+                        
+                        <section class="showcase">
+                              <div class="showcase-flex">
+                                    <h2 class="showcase--title">Our creations</h2>
+                                    <a class="btn btn--black desktop" href="#">See all</a>
+                              </div>
+                              <div class="cards grid">
+                                    <article class="cards__item">
+                                          <a class="cards__item--link" href="#">
+                                                <div class="overlay"></div>
+                                                <picture>
+                                                      <source srcset="images/desktop/image-deep-earth.jpg" media="(min-width: 750px)" />
+                                                      <img src="images/mobile/image-deep-earth.jpg" alt="Loopstudios - Deep Earth" />
+                                                </picture>
+                                                <h3 class="cards__item--title">Deep <span>earth</span></h3>
+                                          </a>
+                                    </article>
+                                    <article class="cards__item">
+                                          <a class="cards__item--link" href="#">
+                                                <div class="overlay"></div>
+                                                <picture>
+                                                      <source srcset="images/desktop/image-night-arcade.jpg" media="(min-width: 750px)" />
+                                                      <img src="images/mobile/image-night-arcade.jpg" alt="Loopstudios - Night Arcade">
+                                                </picture>
+                                                <h3 class="cards__item--title">Night <span>arcade</span></h3>
+                                          </a>
+                                    </article>
+                                    <article class="cards__item">
+                                          <a class="cards__item--link" href="#">
+                                                <div class="overlay"></div>
+                                                <picture>
+                                                      <source srcset="images/desktop/image-soccer-team.jpg" media="(min-width: 750px)" />
+                                                      <img src="images/mobile/image-soccer-team.jpg" alt="Loopstudios - Soccer Team VR">
+                                                </picture>
+                                                <h3 class="cards__item--title">Soccer <span>team VR</span></h3>
+                                          </a>
+                                    </article>
+                                    <article class="cards__item">
+                                          <a class="cards__item--link" href="#">
+                                                <div class="overlay"></div>
+                                                <picture>
+                                                      <source srcset="images/desktop/image-grid.jpg" media="(min-width: 750px)" />
+                                                      <img src="images/mobile/image-grid.jpg" alt="Loopstudios - The Grid">
+                                                </picture>
+                                                <h3 class="cards__item--title">The <span>grid</span></h3>
+                                          </a>
+                                    </article>
+                                    <article class="cards__item">
+                                          <a class="cards__item--link" href="#">
+                                                <div class="overlay"></div>
+                                                <picture>
+                                                      <source srcset="images/desktop/image-from-above.jpg" media="(min-width: 750px)" />
+                                                      <img src="images/mobile/image-from-above.jpg" alt="Loopstudios - From Up Above VR">
+                                                </picture>
+                                                <h3 class="cards__item--title">From up <span>above VR</span></h3>
+                                          </a>
+                                    </article>
+                                    <article class="cards__item">
+                                          <a class="cards__item--link" href="#">
+                                                <div class="overlay"></div>
+                                                <picture>
+                                                      <source srcset="images/desktop/image-pocket-borealis.jpg" media="(min-width: 750px)" />
+                                                      <img src="images/mobile/image-pocket-borealis.jpg" alt="Loopstudios - Pocket Borealis">
+                                                </picture>
+                                                <h3 class="cards__item--title">Pocket <span>borealis</span></h3>
+                                          </a>
+                                    </article>
+                                    <article class="cards__item">
+                                          <a class="cards__item--link" href="#">
+                                                <div class="overlay"></div>
+                                                <picture>
+                                                      <source srcset="images/desktop/image-curiosity.jpg" media="(min-width: 750px)" />
+                                                      <img src="images/mobile/image-curiosity.jpg" alt="Loopstudios - The Curiosity">
+                                                </picture>
+                                                <h3 class="cards__item--title">The <span>curiosity</span></h3>
+                                          </a>
+                                    </article>
+                                    <article class="cards__item">
+                                          <a class="cards__item--link" href="#">
+                                                <div class="overlay"></div>
+                                                <picture>
+                                                      <source srcset="images/desktop/image-fisheye.jpg" media="(min-width: 750px)" />
+                                                      <img src="images/mobile/image-fisheye.jpg" alt="Loopstudios - Make It Fisheye">
+                                                </picture>
+                                                <h3 class="cards__item--title">Make it <span>fisheye</span></h3>
+                                          </a>
+                                    </article>
+                              </div>
+
+                              <a class="btn btn--black mobile" href="#">See all</a>
+                        </section>
+                  </div>                    
+            </main>
+
+            <footer>
+                  <div class="wrapper footer-flex">
+                        <div class="footer-flex--item">
+                              <section class="logo">
+                                    <img class="logo--footer" src="images/logo.svg" alt="Looptstudios - Logo">
+                              </section>
+      
+                              <nav class="nav nav__footer">
+                                    <ul>
+                                          <li class="nav__footer--item">
+                                                <a class="btn btn--white" href="#">About</a>
+                                          </li>
+                                          <li class="nav__footer--item">
+                                                <a class="btn btn--white" href="#">Careers</a>
+                                          </li>
+                                          <li class="nav__footer--item">
+                                                <a class="btn btn--white" href="#">Events</a>
+                                          </li>
+                                          <li class="nav__footer--item">
+                                                <a class="btn btn--white" href="#">Products</a>
+                                          </li>
+                                          <li class="nav__footer--item">
+                                                <a class="btn btn--white" href="#">Support</a>
+                                          </li>
+                                    </ul>
+                              </nav>
+                        </div>
+                        
+                        <div class="footer-flex--item">
+                              <section class="socialmedia">
+                                    <ul class="flex">
+                                          <li class="socialmedia__item">
+                                                <a href="#">
+                                                      <img src="images/icon-facebook.svg" alt="">
+                                                </a>
+                                          </li>
+                                          <li class="socialmedia__item">
+                                                <a href="#">
+                                                      <img src="images/icon-twitter.svg" alt="">
+                                                </a>
+                                          </li>
+                                          <li class="socialmedia__item">
+                                                <a href="#">
+                                                      <img src="images/icon-pinterest.svg" alt="">
+                                                </a>
+                                          </li>
+                                          <li class="socialmedia__item">
+                                                <a href="#">
+                                                      <img src="images/icon-instagram.svg" alt="">
+                                                </a>
+                                          </li>
+                                    </ul>
+                              </section>
+      
+                              <section class="copyrights">
+                                    <p>© 2021 Loopstudios. All rights reserved.</p>
+                              </section>
+                        </div>
+                  </div>
+            </footer>
+
+            <script src="js/script.js"></script>
+      </body>
+</html>

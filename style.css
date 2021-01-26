@@ -1,0 +1,957 @@
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+	Eric Meyer					:: http://meyerweb.com
+	HTML5 Doctor				:: http://html5doctor.com
+	and the HTML5 Boilerplate	:: http://html5boilerplate.com
+-------------------------------------------------------------------------------*/
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+main, article, aside, figure, footer, header, nav, section, details, summary {
+  display: block;
+}
+
+/* Handle box-sizing while better addressing child elements:
+   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+/* Responsive images and other embedded objects */
+/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */
+img,
+object,
+embed {
+  max-width: 100%;
+}
+
+/*
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+	In fact, it *will* cause problems with Google Maps' controls at small size.
+	If this is the case for you, try uncommenting the following:
+#map img {
+		max-width: none;
+}
+*/
+/* force a vertical scrollbar to prevent a jumpy page */
+html {
+  overflow-y: scroll;
+}
+
+/* we use a lot of ULs that aren't bulleted.
+	you'll have to restore the bullets within content,
+	which is fine because they're probably customized anyway */
+ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+/* tables still need cellspacing="0" in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+th {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+td {
+  font-weight: normal;
+  vertical-align: top;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */
+}
+
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+
+.ie6 input {
+  vertical-align: text-bottom;
+}
+
+select, input, textarea {
+  font: 99% sans-serif;
+}
+
+table {
+  font-size: inherit;
+  font: 100%;
+}
+
+small {
+  font-size: 85%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+td, td img {
+  vertical-align: top;
+}
+
+/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif;
+}
+
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+  cursor: pointer;
+}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {
+  margin: 0;
+}
+
+/* make buttons play nice in IE */
+button,
+input[type=button] {
+  width: auto;
+  overflow: visible;
+}
+
+/* scale images in IE7 more attractively */
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* prevent BG image flicker upon hover
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
+/* let's clear some floats */
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+body {
+  font-family: "Alata", sans-serif;
+  font-size: 15px;
+  color: dimgray;
+}
+
+h1, h2, h3 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  color: black;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+.wrapper {
+  position: relative;
+  padding: 0 24px;
+  height: inherit;
+  margin: 0 auto;
+  max-width: 1154px;
+}
+
+@media (min-width: 750px) {
+  .wrapper {
+    padding: 0 20px 0 21px;
+    width: 94%;
+  }
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.logo--header {
+  width: 145px;
+}
+
+@media (min-width: 750px) {
+  .logo--header {
+    width: 192px;
+    margin-left: 1px;
+  }
+}
+
+.logo--footer {
+  position: relative;
+  display: block;
+  left: 1px;
+  margin: 0 auto 34px;
+  width: 145px;
+}
+
+@media (min-width: 750px) {
+  .logo--footer {
+    left: 1px;
+    width: 144px;
+    margin: 0 auto 26px 0;
+  }
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+picture, source {
+  font-size: 0px;
+}
+
+.nav__header--mobile {
+  display: none;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.nav__header--mobile.active {
+  display: block;
+}
+
+.nav__header--mobile.active .item {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.nav__header--desktop {
+  display: none;
+}
+
+@media (min-width: 750px) {
+  .nav__header--desktop {
+    display: block;
+    padding-top: 6px;
+  }
+  .nav__header--desktop ul {
+    position: relative;
+    width: 380px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin-right: 2px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .nav__header--desktop ul li {
+    height: inherit;
+  }
+  .nav__header--desktop ul a {
+    cursor: pointer;
+  }
+}
+
+.nav__footer {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.nav__footer--item {
+  margin-bottom: 20px;
+}
+
+.nav__footer--item:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 750px) {
+  .nav__footer {
+    margin-bottom: 0;
+  }
+  .nav__footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 380px;
+  }
+  .nav__footer--item {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+a.btn {
+  text-decoration: none;
+}
+
+a.btn--white {
+  color: white;
+  position: relative;
+}
+
+a.btn--white::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  left: 50%;
+  bottom: -13px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: white;
+  z-index: 99;
+  width: 0;
+  opacity: 0;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.active a.btn--white::before {
+  left: 0;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+a.btn--white:hover::before {
+  opacity: 1;
+  width: 30px;
+}
+
+.nav .selected a.btn--white::before {
+  opacity: 1;
+  width: 30px;
+}
+
+a.btn--black {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  padding: 9px 35.5px 9px;
+  border: 1px solid black;
+  -webkit-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+a.btn--black:hover {
+  background-color: black;
+  color: white;
+}
+
+a.btn--black.mobile {
+  display: block;
+}
+
+a.btn--black.desktop {
+  display: none;
+}
+
+@media (min-width: 750px) {
+  a.btn--black.mobile {
+    display: none;
+  }
+  a.btn--black.desktop {
+    display: block;
+    width: auto;
+    margin: 0;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    bottom: -4px;
+    position: relative;
+  }
+}
+
+.nav-icon {
+  display: none;
+  position: relative;
+  width: 24px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: 4px;
+  cursor: pointer;
+  z-index: 4;
+}
+
+.nav-icon.active {
+  display: inline;
+}
+
+.nav-icon--close {
+  top: 2px;
+}
+
+@media (min-width: 750px) {
+  .nav-icon.active {
+    display: none;
+  }
+  .nav-icon--close {
+    display: none;
+  }
+}
+
+header {
+  position: relative;
+  height: 650px;
+  margin-bottom: 96px;
+}
+
+header .flex {
+  padding-top: 40px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media (min-width: 750px) {
+  header {
+    margin-bottom: 160px;
+  }
+  header .flex {
+    padding-top: 64px;
+  }
+}
+
+.hero--img {
+  position: relative;
+  background-image: url(images/mobile/image-hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: inherit;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+@media (min-width: 750px) {
+  .hero--img {
+    background-image: url(images/desktop/image-hero.jpg);
+  }
+}
+
+.hero--img.darken {
+  background: black;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.hero--title {
+  position: relative;
+  width: 100%;
+  color: white;
+  border: 2px solid white;
+  text-align: left;
+  padding: 25px 25px 15px;
+  max-width: 400px;
+  line-height: 38px;
+  display: none;
+}
+
+@media (max-width: 380px) {
+  .hero--title {
+    font-size: 10vw;
+  }
+}
+
+.hero--title.active {
+  display: block;
+}
+
+@media (min-width: 750px) {
+  .hero--title {
+    font-size: 72px;
+    line-height: 72px;
+    max-width: 651px;
+    padding: 0;
+  }
+}
+
+.flex--center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  padding: 22px;
+}
+
+.flex--center.desktop {
+  display: none;
+}
+
+@media (max-width: 380px) {
+  .flex--center {
+    padding: 7%;
+  }
+}
+
+@media (min-width: 750px) {
+  .flex--center {
+    font-size: 68px;
+    line-height: 84px;
+    max-width: 651px;
+    padding: 0;
+  }
+  .flex--center.desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    -webkit-box-pack: initial;
+    -ms-flex-pack: initial;
+    justify-content: initial;
+    margin-top: 80px;
+  }
+  .flex--center.desktop .hero--title {
+    font-size: 72px;
+    line-height: 70px;
+    padding: 40px 40px 28px;
+  }
+  .flex--center.mobile {
+    display: none;
+  }
+}
+
+main {
+  margin-bottom: 96px;
+}
+
+.introduction {
+  position: relative;
+  margin-bottom: 96px;
+}
+
+.introduction--image {
+  margin-bottom: 44px;
+}
+
+@media (min-width: 750px) {
+  .introduction--image {
+    width: 65.5%;
+    margin-bottom: 0;
+  }
+}
+
+.introduction__overlap--title {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.introduction__overlap--description {
+  text-align: center;
+  padding: 0 20px;
+  line-height: 25px;
+}
+
+@media (min-width: 750px) {
+  .introduction__overlap {
+    display: block;
+    position: absolute;
+    width: 48.7%;
+    padding: 96px 0 50px 95px;
+    background-color: white;
+    right: 0;
+    bottom: -45px;
+  }
+  .introduction__overlap--title {
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+  .introduction__overlap--description {
+    text-align: left;
+    padding: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .introduction__overlap--title {
+    font-size: 48px;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: 750px) {
+  .introduction {
+    margin-bottom: 180px;
+  }
+}
+
+.showcase--title {
+  text-align: center;
+  margin-bottom: 49px;
+}
+
+@media (min-width: 750px) {
+  .showcase--title {
+    font-size: 48px;
+    margin-bottom: 0;
+  }
+  .showcase-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 82px;
+  }
+}
+
+.cards {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.cards__item {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.cards__item--link {
+  position: relative;
+  display: block;
+  font-size: 0;
+}
+
+.cards__item--link .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(black), to(transparent));
+  background-image: -webkit-linear-gradient(left, black, transparent);
+  background-image: -o-linear-gradient(left, black, transparent);
+  background-image: linear-gradient(to right, black, transparent);
+  opacity: .5;
+  z-index: 2;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.cards__item--link:hover .cards__item--title {
+  color: black;
+}
+
+.cards__item--link:hover .overlay {
+  background-image: -webkit-gradient(linear, left top, right top, from(white), to(white));
+  background-image: -webkit-linear-gradient(left, white, white);
+  background-image: -o-linear-gradient(left, white, white);
+  background-image: linear-gradient(to right, white, white);
+  opacity: .7;
+}
+
+@media (min-width: 750px) {
+  .cards__item--link .overlay {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(black), to(transparent));
+    background-image: -webkit-linear-gradient(bottom, black, transparent);
+    background-image: -o-linear-gradient(bottom, black, transparent);
+    background-image: linear-gradient(to top, black, transparent);
+  }
+  .cards__item--link:hover .overlay {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(white), to(white));
+    background-image: -webkit-linear-gradient(bottom, white, white);
+    background-image: -o-linear-gradient(bottom, white, white);
+    background-image: linear-gradient(to top, white, white);
+  }
+}
+
+.cards__item--title {
+  color: white;
+  position: absolute;
+  bottom: 24px;
+  left: 20px;
+  z-index: 3;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.cards__item--title span {
+  display: block;
+}
+
+@media (min-width: 750px) {
+  .cards__item {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 750px) {
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    grid-gap: 30px;
+  }
+  main {
+    margin-bottom: 184px;
+  }
+}
+
+footer {
+  padding-top: 56px;
+  padding-bottom: 58px;
+  background-color: black;
+  color: white;
+}
+
+@media (min-width: 750px) {
+  footer {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+  footer .footer-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  footer .footer-flex__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer .socialmedia {
+    margin: 0 2px 23px auto;
+  }
+  footer .socialmedia .flex {
+    -ms-flex-item-align: end;
+    -ms-grid-row-align: end;
+    align-self: end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  footer .copyrights {
+    position: relative;
+    right: 3px;
+  }
+}
+
+.socialmedia {
+  margin: 0 auto;
+  width: 144px;
+  margin-bottom: 14px;
+}
+
+.socialmedia__item {
+  position: relative;
+}
+
+.socialmedia__item a {
+  height: 100%;
+}
+
+.socialmedia__item a::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  left: 50%;
+  bottom: -5px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: white;
+  z-index: 99;
+  width: 0;
+  opacity: 0;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.active .socialmedia__item a::before {
+  left: 0;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.socialmedia__item a:hover::before {
+  opacity: 1;
+  width: 100%;
+}
+
+.socialmedia .flex {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.copyrights {
+  text-align: center;
+  color: #8c8c8c;
+}
+
+.original-design--desktop {
+  position: absolute;
+  width: 1440px;
+  height: 2896px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-image: url(/design/desktop-design.jpg);
+  background-repeat: no-repeat;
+  background-size: 1440px 2896px;
+  z-index: -1;
+  opacity: .2;
+}
+
+.original-design--mobile {
+  position: absolute;
+  width: 375px;
+  height: 3217px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-image: url(/design/mobile-design.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  opacity: .2;
+}
+
+/*# sourceMappingURL=style.css.map */
